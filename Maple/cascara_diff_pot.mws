@@ -1,0 +1,38 @@
+with(plots):
+with(orthopoly):
+Digits:=20;
+
+we call the orthonormal polynomials
+
+We compute now the coefficients for the problem. We are assuming the sphere is at r=1, otherwise we divide the radial coordinate by the radious.
+
+>    	for n from 1 by 2 to 21 do A[n]:=int(P(n,x),x=0..1)*(2*n+1): end do;
+
+This is the value of the potential at r=1, that is, it is the boundary condition. Notice the Gibbs phenomena. Even with l=20 we are far from having a good representation.
+
+>    	R(x):=sum(A[k]*P(k,x),k=1..20):
+
+>    	plot(R(x),x=-1..1);
+
+
+We now compute the potential with 20 coefficients:
+
+>    	S(r,theta):=sum(A[k]*r^(-k-1)*P(k,cos(theta)),k=1..20);
+
+The plot of the potential with twenty terms
+
+>    	plot3d(S(r,theta),r=1..10,theta=0..Pi);
+
+The plot with only three terms
+
+>    	SS(r,theta):=sum(A[k]*r^(-k-1)*P(k,cos(theta)),k=1..3);
+
+
+>    	plot3d(SS(r,theta),r=1..10,theta=0..Pi);
+
+
+The difference, (reescaled) notice that away from zero the error is really small.
+
+
+>    	plot3d((S(r,theta)-SS(r,theta))*r^2,r=1..5,theta=0..Pi);
+

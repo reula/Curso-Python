@@ -1,0 +1,387 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     13961,        378]
+NotebookOptionsPosition[     12411,        322]
+NotebookOutlinePosition[     13236,        352]
+CellTagsIndexPosition[     13110,        346]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Transversal Electric Field", "Title",
+ CellChangeTimes->{{3.561218022415276*^9, 3.561218033788005*^9}}],
+
+Cell[TextData[StyleBox["El campo el\[EAcute]ctrico transmitido entre dos \
+interfaces diel\[EAcute]ctricas con \[Epsilon]/\[Epsilon]' = a, complex. Caso \
+donde el campo el\[EAcute]ctrico es perpendicular al plano de incidencia.", \
+"Subtitle"]], "Subtitle",
+ CellChangeTimes->{3.5612180527656116`*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Notation", "Section",
+ CellChangeTimes->{{3.561218072389674*^9, 3.561218073916643*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["", "Subsubtitle"]], "Subsection",
+ CellChangeTimes->{{3.561218099437149*^9, 3.561218101949389*^9}, {
+  3.561218240787678*^9, 3.5612182489761887`*^9}}],
+
+Cell[TextData[{
+ StyleBox["The wave vector the interface is at z = 0. ", "Subsubtitle"],
+ "\n",
+ StyleBox["The vector has only components in the y = 0 plane.", "Subsubtitle"],
+ "\n",
+ StyleBox["\[Theta] is the incidence angle. ", "Subsubtitle"]
+}], "Text",
+ CellChangeTimes->{{3.561218256481592*^9, 3.561218290252142*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"kIz", "[", 
+   RowBox[{"z_", ",", " ", "ar_", ",", " ", "ai_", ",", " ", "\[Theta]_"}], 
+   "]"}], " ", ":=", " ", 
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"z", " ", "<", " ", "0"}], ",", " ", 
+    RowBox[{"Cos", "[", "\[Theta]", "]"}], ",", " ", 
+    RowBox[{"Sqrt", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"ar", " ", "+", " ", 
+         RowBox[{"I", "*", "ai"}]}], ")"}], "^", "2"}], " ", "-", " ", 
+      RowBox[{
+       RowBox[{"Sin", "[", "\[Theta]", "]"}], "^", "2"}]}], "]"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"?", "kIz"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"kIz", "[", 
+   RowBox[{
+    RowBox[{"-", "1."}], ",", "1.", ",", "0.0", ",", "1.2"}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"EI", "[", 
+   RowBox[{
+   "z_", ",", " ", "ar_", ",", " ", "ai_", ",", " ", "\[CapitalTheta]_"}], 
+   "]"}], " ", ":=", " ", 
+  RowBox[{"2.", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Cos", "[", "\[CapitalTheta]", "]"}], "/", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"Cos", "[", "\[CapitalTheta]", "]"}], " ", "+", " ", 
+       RowBox[{"kIz", "[", 
+        RowBox[{
+        "z", ",", " ", "ar", ",", " ", "ai", ",", " ", "\[CapitalTheta]"}], 
+        "]"}]}], ")"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"?", "EI"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"EI", "[", 
+   RowBox[{"1.", ",", "1.", ",", "0.5", ",", "1.2"}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"Plot3D", "[", 
+     RowBox[{
+      RowBox[{"Re", "[", 
+       RowBox[{
+        RowBox[{"EI", "[", 
+         RowBox[{
+         "z", ",", " ", "\[Alpha]r", ",", " ", "\[Alpha]i", ",", " ", 
+          "\[Theta]"}], "]"}], "*", 
+        RowBox[{"Exp", "[", 
+         RowBox[{"I", "*", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "*", "x"}], " ", "+", " ", 
+            RowBox[{
+             RowBox[{"kIz", "[", 
+              RowBox[{
+              "z", ",", " ", "\[Alpha]r", ",", " ", "\[Alpha]i", ",", " ", 
+               "\[Theta]"}], "]"}], "*", "z"}]}], ")"}]}], "]"}]}], "]"}], 
+      ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", " ", "0", ",", " ", "10"}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", " ", 
+        RowBox[{"-", "4"}], ",", " ", "4"}], "}"}]}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"\[Alpha]r", ",", " ", "0", ",", " ", "2"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"\[Alpha]i", ",", " ", "0", ",", " ", "2"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"\[Theta]", ",", " ", "0", ",", " ", "1.56"}], "}"}]}], "]"}], 
+  "Input"]}], "Input",
+ CellChangeTimes->{{3.561218298587358*^9, 3.56121841309445*^9}, {
+   3.561218787310245*^9, 3.561218815701232*^9}, {3.5612188523477497`*^9, 
+   3.5612188611389437`*^9}, {3.561218992777567*^9, 3.561219024019013*^9}, {
+   3.561219056637858*^9, 3.561219096479046*^9}, {3.561219139649888*^9, 
+   3.561219155486864*^9}, {3.561219219803028*^9, 3.561219221073921*^9}, {
+   3.561219328015667*^9, 3.5612193296605*^9}, 3.56121943231905*^9, {
+   3.561219523877246*^9, 3.561219528570343*^9}, {3.561219581201318*^9, 
+   3.561219607689912*^9}, 3.561219654817466*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Global`kIz", "Print", "PrintUsage",
+ CellChangeTimes->{3.561219656675585*^9},
+ CellTags->"Info3561208856-2743462"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"kIz", "[", 
+          RowBox[{"z_", ",", "ar_", ",", "ai_r", ",", "\[Theta]_"}], "]"}], ":=", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"z", "<", "0"}], ",", 
+           RowBox[{"Cos", "[", "\[Theta]", "]"}], ",", 
+           SqrtBox[
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"ar", "+", 
+                RowBox[{"\[ImaginaryI]", " ", "ai"}]}], ")"}], "2"], "-", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}]]}], "]"}]}]},
+       {" "},
+       {
+        RowBox[{
+         RowBox[{"kIz", "[", 
+          RowBox[{"z_", ",", "ar_", ",", "ai_", ",", "\[Theta]_"}], "]"}], ":=", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"z", "<", "0"}], ",", 
+           RowBox[{"Cos", "[", "\[Theta]", "]"}], ",", 
+           SqrtBox[
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"ar", "+", 
+                RowBox[{"\[ImaginaryI]", " ", "ai"}]}], ")"}], "2"], "-", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}]]}], "]"}]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[$CellContext`kIz],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.561219656733259*^9},
+ CellTags->"Info3561208856-2743462"]
+}, Open  ]],
+
+Cell[BoxData["0.3623577544766736`"], "Output",
+ CellChangeTimes->{
+  3.561218416899288*^9, 3.561218455583303*^9, 3.56121881855077*^9, {
+   3.5612188645375834`*^9, 3.561218875284479*^9}, 3.5612190336882973`*^9, 
+   3.5612191024691153`*^9, 3.561219158721353*^9, 3.5612192228703213`*^9, {
+   3.561219263022586*^9, 3.5612193547555857`*^9}, 3.561219434810096*^9, {
+   3.5612195041730433`*^9, 3.561219531022876*^9}, {3.561219584557413*^9, 
+   3.561219611038867*^9}, 3.561219656895001*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Global`EI", "Print", "PrintUsage",
+ CellChangeTimes->{3.5612196570936623`*^9},
+ CellTags->"Info3561208856-5362878"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"EI", "[", 
+          RowBox[{"z_", ",", "ar_", ",", "ai_", ",", "\[CapitalTheta]_"}], 
+          "]"}], ":=", 
+         FractionBox[
+          RowBox[{"2.`", " ", 
+           RowBox[{"Cos", "[", "\[CapitalTheta]", "]"}]}], 
+          RowBox[{
+           RowBox[{"Cos", "[", "\[CapitalTheta]", "]"}], "+", 
+           RowBox[{"kIz", "[", 
+            RowBox[{"z", ",", "ar", ",", "ai", ",", "\[CapitalTheta]"}], 
+            "]"}]}]]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[$CellContext`EI],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.561219657142043*^9},
+ CellTags->"Info3561208856-5362878"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"0.4598718540071125`", "\[InvisibleSpace]", "-", 
+  RowBox[{"0.33535152978828936`", " ", "\[ImaginaryI]"}]}]], "Output",
+ CellChangeTimes->{
+  3.561218416899288*^9, 3.561218455583303*^9, 3.56121881855077*^9, {
+   3.5612188645375834`*^9, 3.561218875284479*^9}, 3.5612190336882973`*^9, 
+   3.5612191024691153`*^9, 3.561219158721353*^9, 3.5612192228703213`*^9, {
+   3.561219263022586*^9, 3.5612193547555857`*^9}, 3.561219434810096*^9, {
+   3.5612195041730433`*^9, 3.561219531022876*^9}, {3.561219584557413*^9, 
+   3.561219611038867*^9}, 3.561219657297267*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[Alpha]i$$ = 
+    1.395, $CellContext`\[Alpha]r$$ = 0.555, $CellContext`\[Theta]$$ = 0.392, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Alpha]r$$], 0, 2}, {
+      Hold[$CellContext`\[Alpha]i$$], 0, 2}, {
+      Hold[$CellContext`\[Theta]$$], 0, 1.56}}, Typeset`size$$ = {
+    353., {168., 173.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Alpha]r$819$$ = 
+    0, $CellContext`\[Alpha]i$820$$ = 0, $CellContext`\[Theta]$821$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`\[Alpha]i$$ = 0, $CellContext`\[Alpha]r$$ = 
+        0, $CellContext`\[Theta]$$ = 0}, "ControllerVariables" :> {
+        Hold[$CellContext`\[Alpha]r$$, $CellContext`\[Alpha]r$819$$, 0], 
+        Hold[$CellContext`\[Alpha]i$$, $CellContext`\[Alpha]i$820$$, 0], 
+        Hold[$CellContext`\[Theta]$$, $CellContext`\[Theta]$821$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot3D[
+        Re[$CellContext`EI[$CellContext`z, $CellContext`\[Alpha]r$$, \
+$CellContext`\[Alpha]i$$, $CellContext`\[Theta]$$] 
+         Exp[I (Sin[$CellContext`\[Theta]$$] $CellContext`x + \
+$CellContext`kIz[$CellContext`z, $CellContext`\[Alpha]r$$, $CellContext`\
+\[Alpha]i$$, $CellContext`\[Theta]$$] $CellContext`z)]], {$CellContext`x, 0, 
+         10}, {$CellContext`z, -4, 4}], 
+      "Specifications" :> {{$CellContext`\[Alpha]r$$, 0, 
+         2}, {$CellContext`\[Alpha]i$$, 0, 2}, {$CellContext`\[Theta]$$, 0, 
+         1.56}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{396., {241.34375, 246.65625}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.561218416899288*^9, 3.561218455583303*^9, 3.56121881855077*^9, {
+   3.5612188645375834`*^9, 3.561218875284479*^9}, 3.5612190336882973`*^9, 
+   3.5612191024691153`*^9, 3.561219158721353*^9, 3.5612192228703213`*^9, {
+   3.561219263022586*^9, 3.5612193547555857`*^9}, 3.561219434810096*^9, {
+   3.5612195041730433`*^9, 3.561219531022876*^9}, {3.561219584557413*^9, 
+   3.561219611038867*^9}, 3.5612196574234123`*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1027, 648},
+WindowMargins->{{0, Automatic}, {Automatic, 19}},
+ShowSelection->True,
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3561208856-2743462"->{
+  Cell[5063, 145, 120, 2, 39, "Print",
+   CellTags->"Info3561208856-2743462"],
+  Cell[5186, 149, 1906, 52, 80, "Print",
+   CellTags->"Info3561208856-2743462"]},
+ "Info3561208856-5362878"->{
+  Cell[7614, 215, 121, 2, 39, "Print",
+   CellTags->"Info3561208856-5362878"],
+  Cell[7738, 219, 1181, 32, 32, "Print",
+   CellTags->"Info3561208856-5362878"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3561208856-2743462", 12736, 333},
+ {"Info3561208856-5362878", 12926, 338}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 109, 1, 76, "Title"],
+Cell[679, 25, 302, 4, 71, "Subtitle"],
+Cell[CellGroupData[{
+Cell[1006, 33, 93, 1, 67, "Section"],
+Cell[CellGroupData[{
+Cell[1124, 38, 174, 2, 36, "Subsection"],
+Cell[1301, 42, 322, 7, 68, "Text"],
+Cell[CellGroupData[{
+Cell[1648, 53, 3390, 88, 178, "Input"],
+Cell[CellGroupData[{
+Cell[5063, 145, 120, 2, 39, "Print",
+ CellTags->"Info3561208856-2743462"],
+Cell[5186, 149, 1906, 52, 80, "Print",
+ CellTags->"Info3561208856-2743462"]
+}, Open  ]],
+Cell[7107, 204, 482, 7, 27, "Output"],
+Cell[CellGroupData[{
+Cell[7614, 215, 121, 2, 39, "Print",
+ CellTags->"Info3561208856-5362878"],
+Cell[7738, 219, 1181, 32, 32, "Print",
+ CellTags->"Info3561208856-5362878"]
+}, Open  ]],
+Cell[8934, 254, 579, 9, 27, "Output"],
+Cell[9516, 265, 2843, 51, 505, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

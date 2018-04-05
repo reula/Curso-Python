@@ -1,0 +1,605 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     21024,        596]
+NotebookOptionsPosition[     18484,        512]
+NotebookOutlinePosition[     19846,        556]
+CellTagsIndexPosition[     19597,        547]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Reflexion Coefficients for a transparent medium", "Section",
+ CellChangeTimes->{{3.5282164658643847`*^9, 3.528216467270854*^9}, {
+  3.528216508132596*^9, 3.528216526522933*^9}}],
+
+Cell["\<\
+
+The reflexion coefficient when the electric field is normal to the incidence \
+plane is given by (here x is the incidence angle) :\
+\>", "Text",
+ CellChangeTimes->{{3.528216530731936*^9, 3.5282165845316553`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"RR", "[", 
+   RowBox[{"x_", ",", "d_"}], "]"}], ":=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Abs", "[", 
+     RowBox[{
+      RowBox[{"Cos", "[", "x", "]"}], " ", "-", " ", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"d", "-", " ", 
+        RowBox[{
+         RowBox[{"Sin", "[", "x", "]"}], "^", "2"}]}], "]"}]}], "]"}], "^", 
+    "2"}], " ", "/", " ", 
+   RowBox[{
+    RowBox[{"Abs", "[", 
+     RowBox[{
+      RowBox[{"Cos", "[", "x", "]"}], " ", "+", " ", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"d", "-", " ", 
+        RowBox[{
+         RowBox[{"Sin", "[", "x", "]"}], "^", "2"}]}], "]"}]}], "]"}], "^", 
+    "2"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"?", "RR"}]}], "Input",
+ CellChangeTimes->{{3.5281882911076727`*^9, 3.5281883177776003`*^9}, {
+  3.5281883485606213`*^9, 3.5281884256530247`*^9}, {3.528207023328149*^9, 
+  3.528207034396747*^9}, {3.528207065125906*^9, 3.528207065886489*^9}, {
+  3.528213950548428*^9, 3.528213954890222*^9}, {3.52821462020438*^9, 
+  3.528214632776053*^9}, {3.528215830357381*^9, 3.52821583439904*^9}, {
+  3.528216648292095*^9, 3.528216660323275*^9}, {3.52821671943364*^9, 
+  3.5282167236641808`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Global`RR", "Print", "PrintUsage",
+ CellChangeTimes->{3.528474411891824*^9},
+ CellTags->"Info3528463609-2588023"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"RR", "[", 
+          RowBox[{"x_", ",", "d_"}], "]"}], ":=", 
+         FractionBox[
+          SuperscriptBox[
+           RowBox[{"Abs", "[", 
+            RowBox[{
+             RowBox[{"Cos", "[", "x", "]"}], "-", 
+             SqrtBox[
+              RowBox[{"d", "-", 
+               SuperscriptBox[
+                RowBox[{"Sin", "[", "x", "]"}], "2"]}]]}], "]"}], "2"], 
+          SuperscriptBox[
+           RowBox[{"Abs", "[", 
+            RowBox[{
+             RowBox[{"Cos", "[", "x", "]"}], "+", 
+             SqrtBox[
+              RowBox[{"d", "-", 
+               SuperscriptBox[
+                RowBox[{"Sin", "[", "x", "]"}], "2"]}]]}], "]"}], "2"]]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[$CellContext`RR],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.5284744122921343`*^9},
+ CellTags->"Info3528463609-2588023"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"RR", "[", 
+          RowBox[{"x_", ",", "d_"}], "]"}], ":=", 
+         FractionBox[
+          SuperscriptBox[
+           RowBox[{"Abs", "[", 
+            RowBox[{
+             RowBox[{"Cos", "[", "x", "]"}], "-", 
+             SqrtBox[
+              RowBox[{"d", "-", 
+               SuperscriptBox[
+                RowBox[{"Sin", "[", "x", "]"}], "2"]}]]}], "]"}], "2"], 
+          SuperscriptBox[
+           RowBox[{"Abs", "[", 
+            RowBox[{
+             RowBox[{"Cos", "[", "x", "]"}], "+", 
+             SqrtBox[
+              RowBox[{"d", "-", 
+               SuperscriptBox[
+                RowBox[{"Sin", "[", "x", "]"}], "2"]}]]}], "]"}], "2"]]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[$CellContext`RR],
+  Editable->False]], "Print",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.5282174446015263`*^9, {3.528217542445888*^9, 3.528217543740341*^9}},
+ CellTags->"Info3528206644-7858108"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"RP", "[", 
+   RowBox[{"x_", ",", " ", "d_"}], "]"}], " ", ":=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Abs", "[", 
+     RowBox[{
+      RowBox[{"Cos", "[", "x", "]"}], " ", "-", " ", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{
+        RowBox[{"1", "/", "d"}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"1", "/", 
+          RowBox[{"d", "^", "2"}]}], 
+         RowBox[{
+          RowBox[{"Sin", "[", "x", "]"}], "^", "2"}]}]}], "]"}]}], "]"}], "^",
+     "2"}], "/", 
+   RowBox[{
+    RowBox[{"Abs", "[", 
+     RowBox[{
+      RowBox[{"Cos", "[", "x", "]"}], " ", "+", " ", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{
+        RowBox[{"1", "/", "d"}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"1", "/", 
+          RowBox[{"d", "^", "2"}]}], 
+         RowBox[{
+          RowBox[{"Sin", "[", "x", "]"}], "^", "2"}]}]}], "]"}]}], "]"}], "^",
+     "2"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"?", "RP"}]}], "Input",
+ CellChangeTimes->{{3.528217564818253*^9, 3.5282176311736927`*^9}, {
+  3.528217674237895*^9, 3.528217686300109*^9}},
+ FormatType->"InputForm"],
+
+Cell[CellGroupData[{
+
+Cell["Global`RP", "Print", "PrintUsage",
+ CellChangeTimes->{3.528474418573556*^9},
+ CellTags->"Info3528463618-4006816"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"RP", "[", 
+          RowBox[{"x_", ",", "d_"}], "]"}], ":=", 
+         FractionBox[
+          SuperscriptBox[
+           RowBox[{"Abs", "[", 
+            RowBox[{
+             RowBox[{"Cos", "[", "x", "]"}], "-", 
+             SqrtBox[
+              RowBox[{
+               FractionBox["1", "d"], "-", 
+               FractionBox[
+                SuperscriptBox[
+                 RowBox[{"Sin", "[", "x", "]"}], "2"], 
+                SuperscriptBox["d", "2"]]}]]}], "]"}], "2"], 
+          SuperscriptBox[
+           RowBox[{"Abs", "[", 
+            RowBox[{
+             RowBox[{"Cos", "[", "x", "]"}], "+", 
+             SqrtBox[
+              RowBox[{
+               FractionBox["1", "d"], "-", 
+               FractionBox[
+                SuperscriptBox[
+                 RowBox[{"Sin", "[", "x", "]"}], "2"], 
+                SuperscriptBox["d", "2"]]}]]}], "]"}], "2"]]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[$CellContext`RP],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.52847441863768*^9},
+ CellTags->"Info3528463618-4006816"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+We now plot these two coefficients for different values of the refraction \
+index, d is the cocient of the incidence refraction index and the transmited \
+one. Notice that RR is always smaller than RP, giving always rise to some \
+degree of polarization. For d < 1 there is a total reflexion angle, beyond \
+which the reflexion coefficients become one. There is also, always a total \
+polarization angle at which the electric reflexion coefficient vanishes.\
+\>", "Text",
+ CellChangeTimes->{{3.5282167910180387`*^9, 3.528216865684683*^9}, {
+  3.528216905355626*^9, 3.528217007193256*^9}, {3.528217039017046*^9, 
+  3.5282171569185123`*^9}, {3.52821772409727*^9, 3.5282177271279488`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"RR", "[", 
+        RowBox[{"x", ",", "d"}], "]"}], ",", 
+       RowBox[{"RP", "[", 
+        RowBox[{"x", ",", "d"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0.001", ",", 
+       RowBox[{"Pi", "/", "2"}]}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d", ",", "0.1", ",", "2"}], "}"}], ",", 
+   RowBox[{"SaveDefinitions", " ", "\[Rule]", " ", "True"}]}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.528160342782082*^9, 3.528160384700246*^9}, {
+  3.528160870367425*^9, 3.528160884356742*^9}, {3.5281614471855*^9, 
+  3.528161449520241*^9}, {3.528161862450864*^9, 3.528161905166576*^9}, {
+  3.528188486460865*^9, 3.5281885248517513`*^9}, {3.52821336356916*^9, 
+  3.528213420741795*^9}, {3.5282135656607924`*^9, 3.5282135738197317`*^9}, {
+  3.528474356714343*^9, 3.528474385347225*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`d$$ = 0.1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`d$$], 0.1, 2}}, Typeset`size$$ = {360., {112., 116.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`d$4800$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`d$$ = 0.1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`d$$, $CellContext`d$4800$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`RR[$CellContext`x, $CellContext`d$$], 
+         $CellContext`RP[$CellContext`x, $CellContext`d$$]}, {$CellContext`x, 
+         0.001, Pi/2}], "Specifications" :> {{$CellContext`d$$, 0.1, 2}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{403., {156.34375, 161.65625}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`RR[
+         Pattern[$CellContext`x, 
+          Blank[]], 
+         Pattern[$CellContext`d, 
+          Blank[]]] := 
+       Abs[Cos[$CellContext`x] - 
+           Sqrt[$CellContext`d - Sin[$CellContext`x]^2]]^2/
+        Abs[Cos[$CellContext`x] + 
+          Sqrt[$CellContext`d - Sin[$CellContext`x]^2]]^2, $CellContext`RP[
+         Pattern[$CellContext`x, 
+          Blank[]], 
+         Pattern[$CellContext`d, 
+          Blank[]]] := 
+       Abs[Cos[$CellContext`x] - Sqrt[
+           1/$CellContext`d - (1/$CellContext`d^2) Sin[$CellContext`x]^2]]^2/
+        Abs[Cos[$CellContext`x] + 
+          Sqrt[1/$CellContext`d - (1/$CellContext`d^2) 
+            Sin[$CellContext`x]^2]]^2}; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.528160386395648*^9, {3.528160670127756*^9, 3.528160677754837*^9}, 
+   3.528160747016053*^9, 3.52816082050699*^9, 3.5281608860277147`*^9, 
+   3.528160966900456*^9, 3.528161004828576*^9, 3.5281611271531677`*^9, 
+   3.528161451328699*^9, 3.528161566185616*^9, 3.528161738052882*^9, {
+   3.528161885054729*^9, 3.528161907235469*^9}, {3.528188496190339*^9, 
+   3.528188526155731*^9}, 3.528207009138544*^9, {3.528207054879525*^9, 
+   3.528207084221863*^9}, 3.528207329364002*^9, 3.528213422810454*^9, 
+   3.528213515039687*^9, 3.528213575456553*^9, 3.5282140069412203`*^9, 
+   3.528214641825348*^9, {3.52821469562184*^9, 3.528214723957829*^9}, 
+   3.528215857833761*^9, 3.528215900888541*^9, 3.528216142972899*^9, 
+   3.528216269018314*^9, 3.5282171799488983`*^9, 3.528217738872754*^9, 
+   3.528474422933406*^9}]
+}, Open  ]],
+
+Cell["\<\
+The transmision angle as a function of the incidence angle is given by :
+  \
+\>", "Text",
+ CellChangeTimes->{{3.528215547317281*^9, 3.528215602378034*^9}, {
+   3.528215637668722*^9, 3.528215640675165*^9}, {3.528215722458902*^9, 
+   3.528215754391637*^9}, 3.528216231858759*^9, {3.528217857928205*^9, 
+   3.528217893740882*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Xtrans", "[", 
+    RowBox[{"x_", ",", "d_"}], "]"}], ":=", " ", 
+   RowBox[{"ArcSin", "[", 
+    RowBox[{"d", " ", 
+     RowBox[{"Sin", "[", "x", "]"}]}], "]"}]}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{"?", "Xtrans"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"Xtrans", "[", 
+      RowBox[{"x", ",", "d"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0.001", ",", 
+       RowBox[{"Pi", "/", "2"}]}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d", ",", "0.1", ",", "2"}], "}"}], ",", 
+   RowBox[{"SaveDefinitions", " ", "\[Rule]", " ", "True"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.528216235921845*^9, 3.528216235952726*^9}, {
+   3.528217918021597*^9, 3.5282180184979687`*^9}, {3.52821806202551*^9, 
+   3.528218092593313*^9}, 3.528218127313841*^9, 3.528474452480068*^9, 
+   3.528474530052835*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Global`Xtrans", "Print", "PrintUsage",
+ CellChangeTimes->{3.528474532123275*^9},
+ CellTags->"Info3528463731-7940998"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"Xtrans", "[", 
+          RowBox[{"x_", ",", "d_"}], "]"}], ":=", 
+         RowBox[{"ArcSin", "[", 
+          RowBox[{"d", " ", 
+           RowBox[{"Sin", "[", "x", "]"}]}], "]"}]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[$CellContext`Xtrans],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.528474532154701*^9},
+ CellTags->"Info3528463731-7940998"]
+}, Open  ]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`d$$ = 0.1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`d$$], 0.1, 2}}, Typeset`size$$ = {360., {110., 115.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`d$677$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`d$$ = 0.1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`d$$, $CellContext`d$677$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[
+        $CellContext`Xtrans[$CellContext`x, $CellContext`d$$], \
+{$CellContext`x, 0.001, Pi/2}], 
+      "Specifications" :> {{$CellContext`d$$, 0.1, 2}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{403., {154.34375, 159.65625}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`Xtrans[
+         Pattern[$CellContext`x, 
+          Blank[]], 
+         Pattern[$CellContext`d, 
+          Blank[]]] := ArcSin[$CellContext`d Sin[$CellContext`x]]}; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.528218094511013*^9, 3.528218130507897*^9, 
+  3.528474458206105*^9, 3.528474532444797*^9}],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"Xtrans", "[", 
+          RowBox[{"x_", ",", "d"}], "]"}], ":=", 
+         RowBox[{"ArcSin", "[", 
+          RowBox[{"d", " ", 
+           RowBox[{"Sin", "[", "x", "]"}]}], "]"}]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[$CellContext`Xtrans],
+  Editable->False]], "Print",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{{3.5282180214506702`*^9, 3.52821805388087*^9}},
+ CellTags->"Info3528207221-4352531"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "Section",
+ CellChangeTimes->{{3.528218037069293*^9, 3.528218038009029*^9}}]
+},
+WindowSize->{1043, 696},
+WindowMargins->{{79, Automatic}, {-61, Automatic}},
+ShowSelection->True,
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3528463609-2588023"->{
+  Cell[2206, 69, 119, 2, 39, "Print",
+   CellTags->"Info3528463609-2588023"],
+  Cell[2328, 73, 1411, 40, 56, "Print",
+   CellTags->"Info3528463609-2588023"]},
+ "Info3528206644-7858108"->{
+  Cell[3742, 115, 1510, 43, 56, "Print",
+   CellTags->"Info3528206644-7858108"]},
+ "Info3528463618-4006816"->{
+  Cell[6432, 202, 119, 2, 39, "Print",
+   CellTags->"Info3528463618-4006816"],
+  Cell[6554, 206, 1624, 46, 88, "Print",
+   CellTags->"Info3528463618-4006816"]},
+ "Info3528463731-7940998"->{
+  Cell[14410, 402, 123, 2, 39, "Print",
+   CellTags->"Info3528463731-7940998"],
+  Cell[14536, 406, 931, 26, 20, "Print",
+   CellTags->"Info3528463731-7940998"]},
+ "Info3528207221-4352531"->{
+  Cell[17363, 477, 1005, 28, 20, "Print",
+   CellTags->"Info3528207221-4352531"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3528463609-2588023", 18811, 523},
+ {"Info3528206644-7858108", 18999, 528},
+ {"Info3528463618-4006816", 19110, 531},
+ {"Info3528463731-7940998", 19300, 536},
+ {"Info3528207221-4352531", 19491, 541}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 183, 2, 67, "Section"],
+Cell[753, 26, 223, 5, 41, "Text"],
+Cell[CellGroupData[{
+Cell[1001, 35, 1180, 30, 43, "Input"],
+Cell[CellGroupData[{
+Cell[2206, 69, 119, 2, 39, "Print",
+ CellTags->"Info3528463609-2588023"],
+Cell[2328, 73, 1411, 40, 56, "Print",
+ CellTags->"Info3528463609-2588023"],
+Cell[3742, 115, 1510, 43, 56, "Print",
+ CellTags->"Info3528206644-7858108"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5301, 164, 1106, 34, 43, "Input"],
+Cell[CellGroupData[{
+Cell[6432, 202, 119, 2, 39, "Print",
+ CellTags->"Info3528463618-4006816"],
+Cell[6554, 206, 1624, 46, 88, "Print",
+ CellTags->"Info3528463618-4006816"]
+}, Open  ]]
+}, Open  ]],
+Cell[8205, 256, 696, 10, 56, "Text"],
+Cell[CellGroupData[{
+Cell[8926, 270, 954, 23, 27, "Input"],
+Cell[9883, 295, 3173, 63, 335, "Output"]
+}, Open  ]],
+Cell[13071, 361, 337, 7, 41, "Text"],
+Cell[CellGroupData[{
+Cell[13433, 372, 952, 26, 58, "Input"],
+Cell[CellGroupData[{
+Cell[14410, 402, 123, 2, 39, "Print",
+ CellTags->"Info3528463731-7940998"],
+Cell[14536, 406, 931, 26, 20, "Print",
+ CellTags->"Info3528463731-7940998"]
+}, Open  ]],
+Cell[15482, 435, 1878, 40, 331, "Output"],
+Cell[17363, 477, 1005, 28, 20, "Print",
+ CellTags->"Info3528207221-4352531"]
+}, Open  ]]
+}, Open  ]],
+Cell[18395, 509, 85, 1, 67, "Section"]
+}
+]
+*)
+
+(* End of internal cache information *)

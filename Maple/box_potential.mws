@@ -1,0 +1,94 @@
+> 	 with(plots):
+ 
+
+> 	#    Call the plotting facility    
+ 
+
+> 	   with(orthopoly):  
+ 
+
+> 	   Digits:=20;    
+ 
+
+# The number of Fourier components to take 
+
+> 	L := 20:
+ 
+
+# The size of the box (x,y,z) to be fixed later in the code 
+
+> 	#a := 1: b := 1: c := 1:
+ 
+
+# Put all variables to zero 
+
+> 	for n from 1 to L do;
+ 
+
+> 	for m from 1 to L do;
+ 
+
+> 	A[n,m]:= 0;
+ 
+
+> 	end do;
+ 
+
+> 	end do;
+ 
+
+> 	
+ 
+
+Compute the Fourier coefficients 
+
+> 	for n from 1 by 2 to L do
+ 
+
+> 	for m from 1 by 2 to L do
+ 
+
+> 	A[n,m]:=int(sin(Pi*x*n/a),x=0..a)*int(sin(Pi*y*m/b),y=0..b);
+ 
+
+> 	gamma_z[n,m] := Pi*sqrt(n^2/a^2 + m^2/b^2);
+ 
+
+> 	end do;
+ 
+
+> 	end do;
+ 
+
+# The potential 
+
+> 	hi:=evalf(4*sum(sum(A[l,k]*sin(Pi*l*x/a)*sin(Pi*k*y/b)*sinh(gamma_z[l,k]*z)/sinh(gamma_z[l,k]),l=1..L),k=1..L)/a/b):
+ 
+
+> 	g:=unapply(hi,x,y,z):
+ 
+
+# A squared box of size one 
+
+> 	a := 1: b := 1: c := 1:
+ 
+
+# Plot of a cut at y=b/2 (middle of box). Observe the Gibbs phenomena, and the exponential decay. 
+
+> 	plot3d(g(x,b/2,z),x=0..a,z=0..c);
+ 
+
+ 
+
+# Plot at z=c, where the potential is supposed to have the value 1. Note that at the border vanishes.  
+
+> 	plot3d(g(x,y,b),x=0..a,y=0..b);
+ 
+
+# The case of a capacitor, a wide box of size 10 and thickness 1. Observe the decay is almost linear at the middle of the box. 
+
+> 	a := 10: b := 10: c := 1:
+ 
+
+> 	plot3d(g(x,b/2,z),x=0..a,z=0..c);
+ 
