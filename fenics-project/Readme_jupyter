@@ -1,0 +1,12 @@
+El container ya está instalado.
+Solo hay que correr 
+
+cd fenics-proyect
+docker star notebook
+docker logs notebook
+
+este último da al final el puerto para conectar el browser (safari).
+Una vez que esté funcionando buscar el archivo: Capacity.ipynb
+Los archivos se guardan en un directorio llamado Capacity, dirigir el VISIT al mismo.
+
+

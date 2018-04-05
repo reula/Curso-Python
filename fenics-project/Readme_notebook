@@ -1,0 +1,12 @@
+Instrucciones para instalar Fenics con Jupyter notebooks en cualquier sistema operativo con Docker.
+
+1.- Instalar Docker: https://www.docker.com/get-docker (hay una edición gratuita, eso es todo lo que se necesita).
+
+2.- Instalar una imagen de Fenics en Docker: http://fenics-containers.readthedocs.io/en/latest/introduction.html
+
+3.- Seguir las instrucciones en http://fenics-containers.readthedocs.io/en/latest/jupyter.html
+
+4.- El notebook guarda datos en una carpeta que pueden ser visualizados con cualquier visualizador que admita el formato vtk.
+Recomiendo el VisIt: https://wci.llnl.gov/simulation/computer-codes/visit/downloads
+
+
